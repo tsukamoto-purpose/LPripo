@@ -79,6 +79,7 @@ header{
 } */
 
 #nav-drawer {
+  margin-top: 100px;
   position: relative;
 }
 /*チェックボックス等は非表示に*/
@@ -87,10 +88,7 @@ header{
 }
 /*アイコンのスペース*/
 #nav-open {
-    display: inline-block;
-    width: 30px;
-    height: 22px;
-    vertical-align: middle;
+    display: block;
 }
 /*閉じる用の薄黒カバー*/
 #nav-close {
@@ -123,22 +121,38 @@ header{
 /*チェックが入ったらもろもろ表示*/
 #nav-input:checked ~ #nav-close {
     display: block;/*カバーを表示*/
-    opacity: .5;
+    opacity: .7;
 }
 #nav-input:checked ~ #nav-content {
     -webkit-transform: translateX(0%);
     transform: translateX(0%);/*中身を表示*/
-    box-shadow: 6px 0 25px rgba(0,0,0,.15);
 }
 #nav-content a{
   display: block;
   color: black;
-  margin: 5vh 0;
+  margin: 0 auto 5vh;
+  position: relative;
+  width: 50%;
+  font-size: 20px;
+}
+#nav-content a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #61C5FF;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition:.3s;
+}
+#nav-content a:hover::after {
+  transform: scale(1, 1);
 }
 #nav-content h1{
   padding: 10vh 0;
 }
-
 
 
 .menu img{
@@ -191,6 +205,9 @@ a:link, :visited {
   height: 100%;
   margin-right: 150px;
 }
+.head{
+
+}
 .head img{
   width: 100%;
 }
@@ -221,22 +238,17 @@ a:link, :visited {
 .line{
   border-bottom: 3px solid red;
 }
-
-
-
 .main{
   margin-right: 150px;
   text-align: center;
   background-image: url(./img/main_wrap.jpg);
   background-size: cover;
-
 }
 
 
 
 .anxiety{
-  padding-top: 15%;
-  height: 1200px;
+  padding:15% 0;
 }
 .anxiety h1{
   font-size: 8vw;
@@ -245,15 +257,13 @@ a:link, :visited {
 }
 .anxieties{
   margin:0 10vw;
-  height: 550px;
   padding-top: 5vw;
 }
 .anxieties_contents{
   text-align: left;
-  height: 150px;
   margin: 5vw 0;
   background-color: #f4f4f4;
-  line-height: 150px;
+  line-height: 120px;
   border-radius: 20px;
   box-shadow: 5px 5px #000000;
 }
@@ -271,9 +281,7 @@ a:link, :visited {
 
 
 .answer{
-  margin-top: 100px;
   padding-top: 100px;
-  height: 1400px;
   background-color: #ffffff;
 }
 .answer h1{
@@ -294,12 +302,12 @@ a:link, :visited {
 
 
 .power{
-  padding-top: 200px;
+  padding: 10vh 0;
   font-size: 0;
 }
 .power h1{
   margin: 0 auto;
-  font-size: 8vw;
+  font-size: 7vw;
   color: #000000;
 
 
@@ -313,7 +321,6 @@ a:link, :visited {
   vertical-align: top;
   display: inline-block;
   width: 37%;
-  height: 50vw;
   margin: 0 20px 50px;
   font-size: 0;
 
@@ -341,7 +348,6 @@ a:link, :visited {
 
 .service{
   padding-top: 5vh;
-  height:3200px;
   color: #000000;
 }
 .service h1{
@@ -405,10 +411,10 @@ a:link, :visited {
 
 
 .flow{
-  height:2000px;
-  margin-top: 30vh;
+  margin-top: 20vh;
   font-size: 0;
   color: #000000;
+  padding-bottom: 10vh;
 }
 .flow h1{
   font-size:8vw;
@@ -416,9 +422,8 @@ a:link, :visited {
 }
 .flow_content{
   text-align: left;
-  height: 125px;
   margin:0 2vw 75px 30vw;
-  background-color: #f4f4f4;
+  background-color: #f2f2f2;
   font-size: 0;
   padding: 25px 0 0 25px;
   border-radius: 20px;
@@ -460,7 +465,6 @@ a:link, :visited {
 
 
 .price{
-  height:800px;
   background-color: #ffffff;
   color: #000000;
   padding: 5vw 15vw;
@@ -479,10 +483,10 @@ a:link, :visited {
 
 .about_us{
   background-color: #9b9b9b;
-  height:400px;
   text-align: left;
   padding-left: 5vw;
   color: white;
+  padding-bottom: 50px;
 }
 .about_us h1{
   display: inline-block;
@@ -503,7 +507,6 @@ a:link, :visited {
 
 
 footer{
-  height: 200px;
   background-color: #000000;
   color: #000000;
   margin-right: 150px;
@@ -655,10 +658,7 @@ display: none;
 
 @media screen and (max-width: 700px) {
 
-.power{
-  height: 3000px;
-  margin-top: 50px;
-}
+
 .power h1{
   font-size: 10vw;
   width:50vw;
@@ -667,7 +667,6 @@ display: none;
   margin-top: 30px;
 }
 .power_contents{
-  height: 700px;
   width: 70%;
   margin: 0;
   padding-top:50px ;
@@ -692,14 +691,12 @@ display: none;
 }
 .anxieties{
   margin:0 5vw;
-  height: 550px;
   padding-top: 5vw;
 }
 .anxieties_contents{
   text-align: left;
-  height: 100px;
   margin: 5vw 0;
-  line-height: 100px;
+  line-height: 80px;
   border-radius: 20px;
   box-shadow: 3px 3px #000000;
 }
@@ -763,7 +760,7 @@ width: 100%;
 
 @media screen and (max-width: 500px){
   .head img{
-    padding-top: 100px;
+    padding-top: 50px;
   }
   .flow_contents{
     margin-left: 2vw;
@@ -786,19 +783,19 @@ width: 100%;
     width: 40px;
     height: 60px;
   }
-  .flow{
-    height: 1300px;
-  }
   footer {
     width: 100%;
+  }
+  .temple{
+    display: none;
+  }
+  .tamtam{
+    display:inherit;
   }
 
 }
 
 @media screen and (max-width: 400px){
-  .anxiety{
-    height: 550px;
-  }
   .service{
     padding-top: 15vw;
     background-color: #ffffff;
@@ -814,18 +811,10 @@ width: 100%;
   .power_contents{
     display: inline-block;
     width: 80%;
-    height: 470px;
     font-size: 0;
   }
- .power{
-   height: 2200px;
- }
- .temple{
-   display: none;
- }
- .tamtam{
-   display:inherit;
- }
+
+
 
 
 }
@@ -833,9 +822,6 @@ width: 100%;
 
 
 @media screen and (max-width: 300px){
-  .flow{
-    height:1800px;
-  }
   .flows_contents{
     width: 80vw;
   }
