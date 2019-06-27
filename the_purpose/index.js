@@ -1,19 +1,25 @@
-var hhhhh = document.querySelectorAll('.sa');
-var animation = function() {
-  for(var i = 0; i < hhhhh.length; i++) {
-    var trigger = 150;
-    if (window.innerHeight > hhhhh[i].getBoundingClientRect().top + trigger) {
-      hhhhh[i].classList.add('show');
-    }
-  }
-}
-window.addEventListener('load', animation);
-window.addEventListener('scroll', animation);
-
-
+$(function() {
+    var topBtn = $('#fifi');
+    topBtn.hide();
+    //スクロールが100に達したらボタン表示
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 700) {
+            topBtn.fadeIn();
+        } else {
+            topBtn.fadeOut();
+        }
+    });
+    // スクロールしてトップ
+    // topBtn.click(function () {
+    //     $('body,html').animate({
+    //         scrollTop: 0
+    //     }, 500);
+    //     return false;
+    // });
+});
 // 以下jquery
 // $(function() {
-//   $('.nav open').click(function(){
+//   $('#nav-open').click(function(){
 //     $('#map').fadeIn();
 //   });
 //   $('.close-map').click(function(){
