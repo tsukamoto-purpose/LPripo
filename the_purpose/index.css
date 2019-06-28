@@ -44,6 +44,9 @@ body{
   font-family: 'Sawarabi Mincho', sans-serif;
   font-family: 'Lora', serif;
 }
+header{
+  z-index: 1000;
+}
 #fifi{
   width: 100%;
   height: 100px;
@@ -163,9 +166,11 @@ body{
   height: 100%;
 }
 .top-main{
+  position: absolute;
   text-align: left;
   font-size: 2.5vw;
-  padding: 15vw 0 0 10vw;
+  left: 10%;
+  top: 30%;
 }
 .margin-left{
   margin-left: 5vw;
@@ -185,16 +190,28 @@ body{
   right: 5%;
   font-size: 2vw;
 }
+.top-main h1::after {
+}
+.top-main h1:hover::after {
+}
+.scroll{
+  position: absolute;
+  top: 85%;
+  right: 50%;
+}
+
+
+
 
 .main{
-    padding: 0 10vh;
+    padding: 0 10vw;
 }
 .question{
   margin-top: 30vh;
   text-align: left;
 }
 .question h1 {
-  font-size: 2.7vw;
+  font-size: 2.6vw;
 }
 .question-sub {
   margin-top: 15vh;
@@ -219,6 +236,10 @@ body{
 .merit h1{
   font-size: 3.5vw;
   margin-bottom: 15vh;
+  background-image: url(./img/merit.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  padding: 10vw 0;
 }
 .merit-contents{
   text-align: left;
@@ -263,12 +284,20 @@ body{
 }
 
 
+
+
+
+
 .plan{
   margin-top: 30vh;
 }
 .plan h1{
   font-size: 3.5vw;
   margin-bottom: 10vh;
+  background-image: url(./img/plan.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  padding: 10vw 0;
 }
 .plans{
   display: table;
@@ -293,6 +322,9 @@ body{
 .bbnone{
   border-bottom: none;
 }
+.lili{
+  font-size: 2vw;
+}
 
 
 
@@ -301,8 +333,19 @@ body{
 .flow{
   margin-top: 30vh;
 }
+
 .flow h1{
-    font-size: 3.5vw;
+  padding: 10vw 0;
+  font-size: 3.5vw;
+  background-image: url(./img/flow.png);
+  background-position: left;
+  background-repeat: no-repeat;
+
+}
+.flows{
+  background-image: url(./img/yazirushi.png);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .flows-table{
   margin: 0 auto;
@@ -343,7 +386,11 @@ body{
   margin-top: 30vh;
 }
 .contact h1{
-    font-size: 3.5vw;
+  font-size: 3.5vw;
+  background-image: url(./img/contact.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  padding: 10vw 0;
 }
 .contact h2{
     font-size: 2vw;
@@ -366,6 +413,9 @@ body{
 .contacts-table th{
   font-size: 2vw;
 }
+/* .contact-iphone{
+  display: none;
+} */
 
 
 
@@ -418,5 +468,11 @@ footer img{
   .scroll_top{
       display: inherit;
   }
+  /* .contact{
+    display: none;
+  }
+  .contact-iphone{
+   display: inherit;
+  } */
 
 }

@@ -1,31 +1,54 @@
+
+
 $(function() {
     var topBtn = $('#fifi');
     topBtn.hide();
     //スクロールが100に達したらボタン表示
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 700) {
+        if ($(this).scrollTop() > 500) {
             topBtn.fadeIn();
         } else {
             topBtn.fadeOut();
         }
     });
-    // スクロールしてトップ
-    // topBtn.click(function () {
-    //     $('body,html').animate({
-    //         scrollTop: 0
-    //     }, 500);
-    //     return false;
-    // });
 });
+// タイプライター
+function typing(str = ""){
+    let buf = document.getElementById("typing").innerHTML; //書き込み済みの文字を要素から取得
+    let writed = buf.length; //書き込み済みの文字数を取得
+    let write = "";
+    if(writed < str.length){
+        write = str.charAt(writed); //1文字だけ取得する
+    }else{
+        buf = buf; //文字の消去("")で際表記
+    }
+    document.getElementById("typing").innerHTML = buf + write; //1文字だけ追加していく
+}
+
+const str = document.getElementById("typing").innerHTML; //書き込む文字を要素から取得
+const delay = 150 //1文字が表示される時間
+
+document.getElementById("typing").innerHTML = "";
+window.setInterval(function(){typing(str);}, delay);
+
+
+
+
+
+
 // 以下jquery
-// $(function() {
-//   $('#nav-open').click(function(){
-//     $('#map').fadeIn();
-//   });
-//   $('.close-map').click(function(){
-//     $('#nav-content').fadeOut();
-//   });
-// });
+$(function () {
+    setTimeout('rect()'); //アニメーションを実行
+});
+
+function rect() {
+    $('#rect').animate({
+        marginTop: '-=10px'
+    }, 800).animate({
+        marginTop: '+=10px'
+    }, 800);
+    setTimeout('rect()', 1600); //アニメーションを繰り返す間隔
+}
 
  $(function(){
    // #で始まるリンクをクリックしたら実行されます
