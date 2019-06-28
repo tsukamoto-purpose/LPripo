@@ -5,7 +5,7 @@ $(function() {
     topBtn.hide();
     //スクロールが100に達したらボタン表示
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 500) {
+        if ($(this).scrollTop() > 600) {
             topBtn.fadeIn();
         } else {
             topBtn.fadeOut();
@@ -32,6 +32,27 @@ document.getElementById("typing").innerHTML = "";
 window.setInterval(function(){typing(str);}, delay);
 
 
+function following(str = ""){
+    let shushu = document.getElementById("following").innerHTML; //書き込み済みの文字を要素から取得
+    let writed = shushu.length; //書き込み済みの文字数を取得
+    let write = "";
+    if(writed < str.length){
+        write = str.charAt(writed); //1文字だけ取得する
+    }else{
+        shushu = shushu; //文字の消去("")で際表記
+    }
+    document.getElementById("following").innerHTML = shushu + write; //1文字だけ追加していく
+}
+
+const string = document.getElementById("following").innerHTML; //書き込む文字を要素から取得
+const deldel = 150 //1文字が表示される時間
+
+document.getElementById("following").innerHTML = "";
+window.setInterval(function(){following(string);}, deldel);
+
+
+
+
 
 
 
@@ -49,6 +70,7 @@ function rect() {
     }, 800);
     setTimeout('rect()', 1600); //アニメーションを繰り返す間隔
 }
+
 
  $(function(){
    // #で始まるリンクをクリックしたら実行されます

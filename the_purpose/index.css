@@ -82,12 +82,12 @@ header{
 #nav-content {
     overflow: auto;
     position: fixed;
-    top: 0;
+    bottom: 0;
     right: 0;
     z-index: 9999;/*最前面に*/
     width: 100%;/*右側に隙間を作る*/
     max-width: 200px;/*最大幅*/
-    height: 100%;
+    height: 80%;
     background: #fff;/*背景色*/
     transition: .3s ease-in-out;/*滑らかに表示*/
     -webkit-transform: translateX(105%);
@@ -177,18 +177,19 @@ header{
 }
 .top-sub{
   position: absolute;
-  font-size: 2vw;
-  bottom: 15%;
+  font-size: 1.5vw;
+  bottom: 20%;
   left: 5%;
 }
 .blue{
-  color: blue;
+  color: #29729B;
 }
 .top-kaisha{
+  font-weight: normal;
   position: absolute;
-  bottom: 5%;
+  bottom: 10%;
   right: 5%;
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 .top-main h1::after {
 }
@@ -206,6 +207,9 @@ header{
 .main{
     padding: 0 10vw;
 }
+
+
+
 .question{
   margin-top: 30vh;
   text-align: left;
@@ -213,17 +217,31 @@ header{
 .question h1 {
   font-size: 2.6vw;
 }
-.question-sub {
-  margin-top: 15vh;
-}
-.question-sub h2{
+.question h2{
   font-size: 3vw;
+  margin-top: 15vh;
   padding-bottom: 5vh;
 }
-.question-sub h3{
+.question-sub{
+  padding-left: 2.5vw;
   font-size: 2vw;
 }
-
+h3{
+  position: relative;
+}
+h3::after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: .5em;
+  left: -1em;
+  width: 20px;
+  height: 10px;
+  border-left: 2px solid #29729B;
+  border-bottom: 2px solid #29729B;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
 
 
 
@@ -239,23 +257,38 @@ header{
   background-image: url(./img/merit.png);
   background-position: left;
   background-repeat: no-repeat;
-  padding: 10vw 0;
+  padding: 2vw 0;
 }
 .merit-contents{
+  position: relative;
   text-align: left;
   margin-bottom: 5vh;
 }
+.merit-contents img{
+  position: absolute;
+  display: inline-block;
+}
 .ll{
-  margin-right: 40%;
+  padding-right: 40%;
 }
 .rr{
-  margin-left: 40%;
+  padding-left: 40%;
+}
+.ll img {
+  right: 10px;
+}
+.rr img{
+  left: 10px;
 }
 .merit-contents h2{
   font-size: 2.5vw;
+  margin-bottom: 1vw;
 }
 .merit-contents p{
   font-size: 2vw;
+}
+.border-bar{
+  border-bottom: 2px #29729B solid;
 }
 
 
@@ -273,14 +306,18 @@ header{
 }
 .marketprice h2{
   text-align: left;
-  margin-left: 40%;
-  font-size: 1.9vw;
 }
 .sannkou{
   width: 100%;
 }
 .sannkou img{
   width: 100%;
+}
+.big{
+  font-size: 3vw;
+}
+.bigger{
+  font-size: 2.5vw;
 }
 
 
@@ -297,7 +334,7 @@ header{
   background-image: url(./img/plan.png);
   background-position: left;
   background-repeat: no-repeat;
-  padding: 10vw 0;
+  padding: 2vw 0;
 }
 .plans{
   display: table;
@@ -325,6 +362,9 @@ header{
 .lili{
   font-size: 2vw;
 }
+.plans li{
+  padding: 0.5vw 0;
+}
 
 
 
@@ -335,7 +375,7 @@ header{
 }
 
 .flow h1{
-  padding: 10vw 0;
+  padding: 2vw 0;
   font-size: 3.5vw;
   background-image: url(./img/flow.png);
   background-position: left;
@@ -344,7 +384,7 @@ header{
 }
 .flows{
   background-image: url(./img/yazirushi.png);
-  background-position: center;
+  background-position: left;
   background-repeat: no-repeat;
 }
 .flows-table{
@@ -367,20 +407,8 @@ header{
 }
 .flows-table td{
   font-size: 3vw;
+  text-align: center;
 }
-.bg-red{
-  background-color: #bfefff;
-}
-.bg-white{
-  background-color: #efffc9;
-}
-.color-blue{
-  color: #bfefff;
-}
-.color-yellow{
-  color: #efffc9;
-}
-
 
 .contact{
   margin-top: 30vh;
@@ -390,7 +418,7 @@ header{
   background-image: url(./img/contact.png);
   background-position: left;
   background-repeat: no-repeat;
-  padding: 10vw 0;
+  padding: 2vw 0;
 }
 .contact h2{
     font-size: 2vw;
