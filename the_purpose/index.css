@@ -171,8 +171,10 @@ body{
   margin-left: 5vw;
 }
 .top-sub{
-  margin: 20vh auto 0;
+  position: absolute;
   font-size: 2vw;
+  bottom: 15%;
+  left: 5%;
 }
 .blue{
   color: blue;
@@ -251,9 +253,14 @@ body{
 .marketprice h2{
   text-align: left;
   margin-left: 40%;
-  font-size: 2vw;
+  font-size: 1.9vw;
 }
-
+.sannkou{
+  width: 100%;
+}
+.sannkou img{
+  width: 100%;
+}
 
 
 .plan{
@@ -312,11 +319,11 @@ body{
   width: 50%;
 }
 .flows-table th{
-  font-size: 5vh;
+  font-size: 3vw;
   padding: 10px 0;
 }
 .flows-table td{
-  font-size: 5vh;
+  font-size: 3vw;
 }
 .bg-red{
   background-color: #bfefff;
@@ -357,7 +364,7 @@ body{
   margin: 0 auto;
 }
 .contacts-table th{
-  font-size: 3vh;
+  font-size: 3vw;
 }
 
 
