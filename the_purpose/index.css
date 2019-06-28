@@ -1,4 +1,4 @@
-head,body,header,footer,h1,h2,h3,h5,a,img,p,div,span{
+head,body,header,footer,h1,h2,h3,h5,a,img,p,div,span,ul,tr,th,td{
   padding: 0;
   margin: 0;
 }
@@ -24,11 +24,14 @@ p,h1{
   word-break: break-all;
 }
 /*下記で下線部を消す*/
-a{
+a,{
   text-decoration: none;
 }
 a:link, :visited {
   text-decoration: none;
+}
+li{
+  list-style: none;
 }
 @font-face{
   font-family: "Sawarabi Mincho";
@@ -126,9 +129,9 @@ body{
   width: 100px;
 }
 .side_contents img{
-    width:  100px;
-    cursor: pointer;
-    float: right;
+  width:  100px;
+  cursor: pointer;
+  float: right;
 }
 .menu{
   float: left;
@@ -155,11 +158,8 @@ body{
 }
 
 
-.main{
-  height: 100%;
-}
 
-.top{
+.top {
   height: 100%;
 }
 .top-main{
@@ -184,17 +184,169 @@ body{
   font-size: 2vw;
 }
 
-
-.power{
-  height : 3000px;
+.main{
+    padding: 0 10vh;
+}
+.question{
+  margin-top: 30vh;
+  text-align: left;
+}
+.question h1 {
+  font-size: 2.7vw;
+}
+.question-sub {
+  margin-top: 15vh;
+}
+.question-sub h2{
+  font-size: 3vw;
+  padding-bottom: 5vh;
+}
+.question-sub h3{
+  font-size: 2vw;
 }
 
 
 
 
 
+
+
+.merit{
+  margin-top: 30vh;
+}
+.merit h1{
+  font-size: 3.5vw;
+  margin-bottom: 15vh;
+}
+.merit-contents{
+  text-align: left;
+  margin-bottom: 5vh;
+}
+.ll{
+  margin-right: 40%;
+}
+.rr{
+  margin-left: 40%;
+}
+.merit-contents h2{
+  font-size: 2.5vw;
+}
+.merit-contents p{
+  font-size: 2vw;
+}
+
+
+
+
+
+
+
+
+.marketprice{
+  margin-top: 30vh;
+}
+.marketprice h1{
+  font-size: 3vw;
+}
+.marketprice h2{
+  text-align: left;
+  margin-left: 40%;
+  font-size: 2vw;
+}
+
+
+
+.plan{
+  margin-top: 30vh;
+}
+.plan h1{
+  font-size: 3.5vw;
+  margin-bottom: 10vh;
+}
+.plans{
+  display: table;
+  table-layout: fixed;
+  text-align: center;
+  width: 100%;
+}
+.plan-contents {
+  border: 2px #02232F solid;
+  display: table-cell;
+}
+.bborder{
+  border-bottom: 2px #02232F solid;
+  font-size: 2.5vw;
+}
+.rrnone{
+  border-right: none;
+}
+.llnone{
+  border-left: none;
+}
+.bbnone{
+  border-bottom: none;
+}
+
+
+
+.flow{
+  margin-top: 30vh;
+}
+.flow h1{
+    font-size: 3.5vw;
+}
+.flows-table{
+  margin: 0 auto;
+  border: 2px #02232F solid;
+  text-align: left;
+  border-spacing: inherit;
+  width: 70%;
+}
+.bbottom{
+  border-bottom: 2px #02232F solid;
+}
+.flows th{
+  border-right: 2px #02232F solid;
+  width: 50%;
+}
+
+
+
+
+.contact{
+  margin-top: 30vh;
+}
+.contact h1{
+    font-size: 3.5vw;
+}
+.contact h2{
+    font-size: 2vw;
+    margin-bottom: 10vh;
+}
+.contacts{
+  text-align: left;
+}
+.contacts-table{
+  margin: 0 auto;
+}
+.section{
+  display: inline-block;
+  float: left;
+}
+.last{
+  display: block;
+  margin: 0 auto;
+}
+.contacts-table th{
+  font-size: 3vh;
+}
+
+
+
+
 footer{
-  background-color: #ffffff;
+  margin-top: 20vh;
+  background-color: #000000;
   border-top: 5px solid#000000;
   color: #000000;
 }
