@@ -289,6 +289,8 @@ body{
 
 
 
+
+
 .flow{
   margin-top: 30vh;
 }
@@ -309,8 +311,25 @@ body{
   border-right: 2px #02232F solid;
   width: 50%;
 }
-
-
+.flows-table th{
+  font-size: 5vh;
+  padding: 10px 0;
+}
+.flows-table td{
+  font-size: 5vh;
+}
+.bg-red{
+  background-color: #bfefff;
+}
+.bg-white{
+  background-color: #efffc9;
+}
+.color-blue{
+  color: #bfefff;
+}
+.color-yellow{
+  color: #efffc9;
+}
 
 
 .contact{
@@ -340,6 +359,8 @@ body{
 .contacts-table th{
   font-size: 3vh;
 }
+
+
 
 
 

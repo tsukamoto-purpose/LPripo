@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+ <link href="https://fonts.googleapis.com/css?family=Lora:400,400i|Sawarabi+Mincho&display=swap" rel="stylesheet">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>sample</title>
 </head>
 
 <body>
 
-<h2>問合せ内容</h2>
+<h1>問合せ内容</h1>
 
 <form action="mailto.php" method="post">
 
