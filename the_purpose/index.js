@@ -52,6 +52,15 @@ window.setInterval(function(){following(string);}, deldel);
 
 
 
+//遅らせる
+$(function(){
+    $(".kakkoii").css({opacity:'0'});
+    setTimeout(function(){
+        $(".kakkoii").stop().animate({opacity:'1'},500);
+    },1000);
+});
+
+
 
 
 
