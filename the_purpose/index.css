@@ -47,6 +47,37 @@ body{
 header{
   z-index: 1000;
 }
+.side-bar span {
+  display: block;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+.side-bar {
+  float: right;
+  position: relative;
+  width: 74px;
+  height: 100px;
+  cursor: pointer;
+  right: 20px;
+}
+.side-bar span {
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+.side-bar span:nth-of-type(1) {
+  top: 20px;
+}
+.side-bar span:nth-of-type(2) {
+  top: 46px;
+}
+.side-bar span:nth-of-type(3) {
+  bottom: 20px;
+}
+
+
 #fifi{
   width: 100%;
   height: 100px;
@@ -63,44 +94,44 @@ header{
 }
 /*アイコンのスペース*/
 #nav-open {
-    display: block;
+  display: block;
 }
 /*閉じる用の薄黒カバー*/
 #nav-close {
-    display: none;/*はじめは隠しておく*/
-    position: fixed;
-    z-index: 99;
-    top: 0;/*全体に広がるように*/
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    opacity: 0;
-    transition: .3s ease-in-out;
+  display: none;/*はじめは隠しておく*/
+  position: fixed;
+  z-index: 99;
+  top: 0;/*全体に広がるように*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .3s ease-in-out;
 }
 /*中身*/
 #nav-content {
-    overflow: auto;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    z-index: 9999;/*最前面に*/
-    width: 100%;/*右側に隙間を作る*/
-    max-width: 200px;/*最大幅*/
-    height: 100%;
-    background: #fff;/*背景色*/
-    transition: .3s ease-in-out;/*滑らかに表示*/
-    -webkit-transform: translateX(105%);
-    transform: translateX(105%);/*左に隠しておく*/
+  overflow: auto;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;/*最前面に*/
+  width: 100%;/*右側に隙間を作る*/
+  max-width: 200px;/*最大幅*/
+  height: 100%;
+  background: #fff;/*背景色*/
+  transition: .3s ease-in-out;/*滑らかに表示*/
+  -webkit-transform: translateX(105%);
+  transform: translateX(105%);/*左に隠しておく*/
 }
 /*チェックが入ったらもろもろ表示*/
 #nav-input:checked ~ #nav-close {
-    display: block;/*カバーを表示*/
-    opacity: .7;
+  display: block;/*カバーを表示*/
+  opacity: .7;
 }
 #nav-input:checked ~ #nav-content {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);/*中身を表示*/
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);/*中身を表示*/
 }
 #nav-content a{
   display: block;
@@ -130,11 +161,6 @@ header{
 }
 .menu img{
   width: 100px;
-}
-.side_contents img{
-  width:  100px;
-  cursor: pointer;
-  float: right;
 }
 .menu{
   float: left;
@@ -170,12 +196,28 @@ header{
   background-image: url(./img/samplesample.png);
 }
 .top-main{
-  position: absolute;
   text-align: left;
-  font-size: 2.5vw;
+  position: absolute;
+  font-size: 5vw;
   left: 10%;
   top: 30%;
+  white-space: pre;
 }
+/* .top-main_2{
+  background: linear-gradient(transparent 60%, #ffff66 60%);
+  position: absolute;
+  font-size: 5vw;
+  left: 10%;
+  top: 45%;
+} */
+
+
+
+.contents-img{
+  position: absolute;
+  left: 8%;
+}
+
 .margin-left{
   margin-left: 5vw;
 }
@@ -214,12 +256,15 @@ header{
 
 
 
+
+
+
 .question{
   margin-top: 30vh;
   text-align: left;
 }
 .question h1 {
-  font-size: 2.6vw;
+  font-size: 2.5vw;
 }
 .question h2{
   font-size: 3vw;
@@ -251,17 +296,20 @@ h3::after {
 
 
 
+.marker-line {
+background: linear-gradient(transparent 60%, #a1e4ff 60%);
+}
+
+
 
 .merit{
   margin-top: 30vh;
 }
 .merit h1{
+  position: relative;
   font-size: 3.5vw;
   margin-bottom: 15vh;
-  background-image: url(./img/merit.png);
-  background-position: left;
-  background-repeat: no-repeat;
-  padding: 2vw 0;
+  padding-top: 7vw;
 }
 .merit-contents{
   position: relative;
@@ -290,9 +338,6 @@ h3::after {
 }
 .merit-contents p{
   font-size: 2vw;
-}
-.border-bar{
-  border-bottom: 2px #29729B solid;
 }
 
 
@@ -335,10 +380,7 @@ h3::after {
 .plan h1{
   font-size: 3.5vw;
   margin-bottom: 10vh;
-  background-image: url(./img/plan.png);
-  background-position: left;
-  background-repeat: no-repeat;
-  padding: 2vw 0;
+  padding-top: 7vw;
 }
 .plans{
   display: table;
@@ -379,12 +421,8 @@ h3::after {
 }
 
 .flow h1{
-  padding: 2vw 0;
+  padding-top: 7vw;
   font-size: 3.5vw;
-  background-image: url(./img/flow.png);
-  background-position: left;
-  background-repeat: no-repeat;
-
 }
 .flows{
   background-image: url(./img/yazirushi.png);
@@ -414,19 +452,22 @@ h3::after {
   text-align: center;
 }
 
+
+
+
+
+
+
 .contact{
   margin-top: 30vh;
 }
 .contact h1{
   font-size: 3.5vw;
-  background-image: url(./img/contact.png);
-  background-position: left;
-  background-repeat: no-repeat;
-  padding: 2vw 0;
+  padding-top: 8vw;
 }
 .contact h2{
-    font-size: 2vw;
-    margin-bottom: 10vh;
+  font-size: 2vw;
+  margin-bottom: 10vh;
 }
 .contacts{
   text-align: left;
