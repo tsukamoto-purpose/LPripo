@@ -55,7 +55,7 @@ header{
 .side-bar {
   float: right;
   position: relative;
-  width: 74px;
+  width: 50px;
   height: 100px;
   cursor: pointer;
   right: 20px;
@@ -63,18 +63,18 @@ header{
 .side-bar span {
   position: absolute;
   width: 100%;
-  height: 8px;
+  height: 4px;
   background-color: #ffffff;
   border-radius: 4px;
 }
 .side-bar span:nth-of-type(1) {
-  top: 20px;
+  top: 30px;
 }
 .side-bar span:nth-of-type(2) {
-  top: 46px;
+  top: 48px;
 }
 .side-bar span:nth-of-type(3) {
-  bottom: 20px;
+  bottom: 30px;
 }
 
 
@@ -191,9 +191,9 @@ header{
 .top {
   height: 100%;
 }
-.kakkoii{
-  height: 100%;
-  background-image: url(./img/samplesample.png);
+.logo{
+   position: absolute;
+   right: 0;
 }
 .top-main{
   text-align: left;
@@ -217,6 +217,26 @@ header{
   position: absolute;
   left: 8%;
 }
+.up {
+  transform: translate(0, 100px);
+}
+.sa {
+  opacity: 0;
+  transition: all 1.0s ease;
+}
+.sa.show {
+  opacity: 1;
+  transform: none;
+}
+
+.backc_a{
+  background-color: rgba(161, 228, 255,0.5);
+}
+.backc_b{
+  background-color: rgba(162, 192, 252,0.5);
+}
+
+
 
 .margin-left{
   margin-left: 5vw;
@@ -237,10 +257,6 @@ header{
   right: 5%;
   font-size: 1.5vw;
 }
-.top-main h1::after {
-}
-.top-main h1:hover::after {
-}
 .scroll{
   position: absolute;
   top: 85%;
@@ -260,16 +276,22 @@ header{
 
 
 .question{
-  margin-top: 30vh;
+  margin-top: 40vh;
   text-align: left;
 }
+.question img {
+  position: absolute;
+  right: 10%;
+}
 .question h1 {
+  position: relative;
   font-size: 2.5vw;
 }
 .question h2{
-  font-size: 3vw;
+  font-size: 4.5vw;
   margin-top: 15vh;
-  padding-bottom: 5vh;
+  margin-bottom: 5vh;
+  width: 70%;
 }
 .question-sub{
   padding-left: 2.5vw;
@@ -277,6 +299,9 @@ header{
 }
 h3{
   position: relative;
+}
+.question h3{
+  padding: 2vh 0;
 }
 h3::after {
   display: block;
@@ -296,9 +321,35 @@ h3::after {
 
 
 
-.marker-line {
-background: linear-gradient(transparent 60%, #a1e4ff 60%);
+.papa{
+background: linear-gradient(transparent 60%, rgba(41, 114, 155,0.5) 60%);
 }
+.saikou{
+  display: block;
+  color: black;
+  position: relative;
+  width: 100%;
+  font-size: 20px;
+}
+.saikou ::after {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 10px;
+  background: rgba(41, 114, 155,0.5);
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition:.3s;
+}
+
+.taken ::after{
+  transform: scale(1, 1);
+  transition: all 1.0s ease;
+}
+
+
 
 
 
@@ -314,11 +365,12 @@ background: linear-gradient(transparent 60%, #a1e4ff 60%);
 .merit-contents{
   position: relative;
   text-align: left;
-  margin-bottom: 5vh;
+  margin-bottom: 20vh;
 }
 .merit-contents img{
   position: absolute;
-  display: inline-block;
+  display: block;
+  z-index: 10;
 }
 .ll{
   padding-right: 40%;
@@ -327,10 +379,10 @@ background: linear-gradient(transparent 60%, #a1e4ff 60%);
   padding-left: 40%;
 }
 .ll img {
-  right: 10px;
+  right: 10%;
 }
 .rr img{
-  left: 10px;
+  left: 10%;
 }
 .merit-contents h2{
   font-size: 2.5vw;
@@ -351,7 +403,7 @@ background: linear-gradient(transparent 60%, #a1e4ff 60%);
   margin-top: 30vh;
 }
 .marketprice h1{
-  font-size: 3vw;
+  font-size: 2.8vw;
 }
 .marketprice h2{
   text-align: left;
