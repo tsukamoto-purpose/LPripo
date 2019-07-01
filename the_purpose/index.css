@@ -238,7 +238,10 @@ header{
 
 
 
-.margin-left{
+.margin-left1{
+  margin-left: 5vw;
+}
+.margin-left2{
   margin-left: 5vw;
 }
 .top-sub{
@@ -276,7 +279,7 @@ header{
 
 
 .question{
-  margin-top: 40vh;
+  margin-top: 40vw;
   text-align: left;
 }
 .question img {
@@ -538,13 +541,36 @@ background: linear-gradient(transparent 60%, rgba(41, 114, 155,0.5) 60%);
 .contacts-table th{
   font-size: 2vw;
 }
-/* .contact-iphone{
+.contact-iphone{
   display: none;
-} */
+}
+.contact-iphone{
+  margin-top: 30vh;
+}
+.contact-iphone h1{
+  font-size: 4vw;
+  padding-top: 8vw;
+}
+.contact-iphone h2{
+  font-size: 3vw;
+  margin-bottom: 5vh;
+}
+table {
+    border-spacing: 10px;
+}
 
 
 
 
+input[type="submit" i] {
+    cursor: pointer;
+    color: white;
+    background-color: #29729B;
+    width: 200px;
+    height: 50px;
+    margin-top: 10vh;
+    font-size: 20px;
+}
 
 
 footer{
@@ -590,14 +616,144 @@ footer img{
 }
 
 @media screen and (max-width:480px){
-  .scroll_top{
-      display: inherit;
-  }
-  /* .contact{
-    display: none;
-  }
-  .contact-iphone{
-   display: inherit;
-  } */
+
+.scroll_top{
+    display: inherit;
+}
+
+.top-main{
+  font-size: 9vw;
+}
+.top-sub h2{
+  font-size: 5vw;
+}
+.top-kaisha{
+  font-size: 3vw;
+}
+.scroll{
+  right: 70%;
+}
+.main {
+  padding: 0 5vw;
+}
+
+.margin-left1{
+  margin-left: 0;
+}
+.question-main h1{
+  font-size: 5vw;
+}
+.question img{
+  width: 40%;
+  right: 0;
+}
+.question-sub{
+  padding-left: 3vw;
+  font-size: 3vw;
+}
+.question h3{
+  padding: 1vh 0;
+}
+h3::after {
+  top: .8em;
+  left: -1.5em;
+  width: 15px;
+  height: 7px;
+}
+.saikou{
+  display: block;
+  color: black;
+  position: relative;
+  width: 100%;
+  font-size: 20px;
+}
+.saikou ::after {
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  content: '';
+  height: 10px;
+  background: rgba(41, 114, 155,0.5);
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition:.3s;
+}
+
+.taken ::after{
+  transform: scale(1, 1);
+  transition: all 1.0s ease;
+}
+
+.plan-contents{
+  border: 1px #02232F solid;
+}
+.bborder{
+  border-bottom: 1px #02232F solid;
+}
+.rrnone{
+  border-right: none;
+}
+.llnone{
+  border-left: none;
+}
+
+.contents-img{
+  width: 30%;
+}
+.merit-contents img{
+  width: 35%;
+}
+.merit-contents{
+  margin-bottom: 13vh;
+}
+.ll img {
+  right: 0;
+}
+.rr img{
+  left: 0;
+}
+.marketprice h1{
+  font-size: 3.3vw;
+}
+.big{
+  font-size: 3.5vw;
+}
+.bigger{
+  font-size: 3vw;
+}
+
+.flows{
+  background-image:none;
+}
+.flows-table {
+    border: 1px #02232F solid;
+    width: 80%;
+}
+.flows th {
+    border-right: 1px #02232F solid;
+    width: 40%;
+}
+.bbottom{
+  border-bottom: 1px #02232F solid;
+}
+
+.contact{
+  display: none;
+}
+.contact-iphone{
+ display: inherit;
+
+}
+.contacts-table th{
+  font-size: 4vw;
+}
+input[type="submit" i] {
+    background-color: #29729B;
+    width: 100px;
+    height: 30px;
+    margin-top: 5vh;
+    font-size: 11px;
+}
+
 
 }
